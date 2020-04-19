@@ -1,0 +1,202 @@
+$cubo-dim: 100px;
+$anim-dur: 4s;
+
+$north-offset-x: 600px;
+$north-offset-y: 900px;
+$north-offset-z: -700px;
+$south-offset-x: -700px;
+$south-offset-y: 900px;
+$south-offset-z: 500px;
+$east-offset-x: 500px;
+$east-offset-y: -500px;
+$east-offset-z: 800px;
+$west-offset-x: 1200px;
+$west-offset-y: -1000px;
+$west-offset-z: -1000px;
+$top-offset-x: -800px;
+$top-offset-y: 600px;
+$top-offset-z: -1300px;
+$bottom-offset-x: 400px;
+$bottom-offset-y: -1100px;
+$bottom-offset-z: 900px;
+
+@keyframes forever-spin {
+	0% {
+		transform: rotateX(0deg) rotateZ(0deg);
+	}
+	100% {
+		transform: rotateX(360deg) rotateZ(360deg);
+	}
+}
+
+@keyframes fly-in-south {
+	0% {
+		transform: translate3d($south-offset-x, $south-offset-y, $south-offset-z);
+		opacity: 0;
+	}
+	1% {
+		opacity: 1;
+	}
+	50% {
+		transform: translate3d(0,0,$cubo-dim/2);
+	}
+	100% {
+		transform: translate3d(0,0,$cubo-dim/2);
+	}
+}
+
+@keyframes fly-in-north {
+	0% {
+		transform: translate3d($north-offset-x, $north-offset-y, $north-offset-z);
+		opacity: 0;
+	}
+	1% {
+		opacity: 1;
+	}
+	50% {
+		transform: rotateY(180deg) translate3d(0,0,$cubo-dim/2);
+	}
+	100% {
+		transform: rotateY(180deg) translate3d(0,0,$cubo-dim/2);
+	}
+}
+
+@keyframes fly-in-west {
+	0% {
+		transform: translate3d($west-offset-x, $west-offset-y, $west-offset-z);
+		opacity: 0;
+	}
+	1% {
+		opacity: 1;
+	}
+	50% {
+		transform: rotateY( 90deg) translate3d(0,0,$cubo-dim/2);
+	}
+	100% {
+		transform: rotateY( 90deg) translate3d(0,0,$cubo-dim/2);
+	}
+}
+
+@keyframes fly-in-east {
+	0% {
+		transform: translate3d($east-offset-x, $east-offset-y, $east-offset-z);
+		opacity: 0;
+	}
+	1% {
+		opacity: 1;
+	}
+	50% {
+		transform: rotateY(-90deg) translate3d(0,0,$cubo-dim/2);
+	}
+	100% {
+		transform: rotateY(-90deg) translate3d(0,0,$cubo-dim/2);
+	}
+}
+
+@keyframes fly-in-top {
+	0% {
+		transform: translate3d($top-offset-x, $top-offset-y, $top-offset-z);
+		opacity: 0;
+	}
+	1% {
+		opacity: 1;
+	}
+	50% {
+		transform: rotateX( 90deg) translate3d(0,0,$cubo-dim/2);
+	}
+	100% {
+		transform: rotateX( 90deg) translate3d(0,0,$cubo-dim/2);
+	}
+}
+
+@keyframes fly-in-bottom {
+	0% {
+		transform: translate3d($bottom-offset-x, $bottom-offset-y, $bottom-offset-z);
+		opacity: 0;
+	}
+	1% {
+		opacity: 1;
+	}
+	50% {
+		transform: rotateX( -90deg) translate3d(0,0,$cubo-dim/2);
+	}
+	100% {
+		transform: rotateX( -90deg) translate3d(0,0,$cubo-dim/2);
+	}
+}
+
+body { 
+	//overflow: hidden;
+	width: 100%;
+	height: 100%;
+}
+
+#scene {
+	transform-style: preserve-3d;	
+	position: relative;
+	width: 100%;
+	height: 100%;
+}
+#cubo {
+	transform: rotateX( 70deg) rotateZ(70deg) ;
+		width: $cubo-dim;
+	height: $cubo-dim;
+	position: relative;
+	transform-style: preserve-3d;
+		top: 50%;
+		left: 50%;		
+		margin-left: -50px;
+		margin-top: -50px;
+	animation-duration: 10s;
+	animation-name: forever-spin;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+}
+.cubo-face {
+	background-color: lightgray;
+	width: $cubo-dim;
+	height: $cubo-dim;
+	/*border: 1px solid $background-colour;*/
+	opacity: 50%;
+	position: absolute;
+	animation-timing-function: ease;
+	animation-direction: alternate;
+	animation-iteration-count: infinite;
+	animation-fill-mode: forwards;
+	animation-duration: $anim-dur;
+
+}
+.cubo-face img {
+	width: $cubo-dim;
+	height: $cubo-dim;
+}
+#cubo-south {
+	transform: rotateX( 0deg) translateZ($cubo-dim/2);
+	background-color: green;
+	animation-name: fly-in-south;
+}
+#cubo-west  {
+	transform: rotateY( 90deg) translateZ($cubo-dim/2); 
+	background-color: red;
+	animation-name: fly-in-west;
+}
+#cubo-north   { 
+	transform: rotateY(180deg) translateZ($cubo-dim/2); 
+	background-color: blue;
+	animation-name: fly-in-north;
+}
+#cubo-east   { 
+	transform: rotateY(-90deg) translateZ($cubo-dim/2); 
+	background-color: orange;
+	animation-name: fly-in-east;
+}
+#cubo-top    { 
+	transform: rotateX( 90deg) translateZ($cubo-dim/2); 
+	background-color: purple;
+	animation-name: fly-in-top;
+}
+#cubo-bottom { 
+	transform: rotateX(-90deg) translateZ($cubo-dim/2); 
+	background-color: yellow;
+	animation-name: fly-in-bottom;
+}

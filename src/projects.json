@@ -1,0 +1,76 @@
+[
+	{
+		"title": "V_",
+		"header": "The most convenient little Javascript form validator you ever did meet.",
+		"body": [
+			"V_ (pronounced vee-underscore, or Vunderscore if you're feeling frisky) is a script that allows for client-side validation without the need to write additional Javascript. HTML-based validations are becoming the norm nowadays, with the implementation of things like the pattern attribute; V_ expands on that idea using HTML5 data attributes and modern Javascript features. It's fast, lightweight, and convenient."
+		],
+		"image": "",
+		"links": [
+			{"type": "Github", "url": "https://github.com/EndaHallahan/V_"},
+			{"type": "Demo", "url": "https://endahallahan.github.io/V_/"},
+			{"type": "NPM", "url": "https://www.npmjs.com/package/v_underscore"}
+		],
+		"trans_x": "10",
+		"trans_y": "10"
+	},
+	{
+		"title": "BBClash",
+		"header": "A fast, robust, powerful BBCode compiler for the modern internet.",
+		"body": [
+			"BBCode may be a product of late-ninties messageboards, but that doesn't mean it's not useful now. While it's been eclipsed in recent years by Markdown for simple usage, its simple yet highly extensible syntax is a major advantage when it comes to formatting more complex documents. With that in mind, I chose it as the basis for Penclash's markup lanugage of choice, and developed the BBClash compiler.",
+			"While most implementations of BBCode use a simple regex-based 'find and replace' system, BBClash is a compiler: it parses BBCode documents into an AST-like structure, which it then uses to construct compliant HTML. The advantages of this are two-fold: it ensures that the output HTML will always be compliant, even if the input BBCode is not, and it allows the compiler to optimise the output by removing invalid or empty BBCode tags. BBClash also escapes HTML as it parses a document, making it safe to use without additional processing.",
+			"BBClash is written entirely in Rust, and can be implemented on the client as highly-performant WASM."
+		],
+		"image": "",
+		"links": [
+			{"type": "Github", "url": "https://github.com/EndaHallahan/BBClash"},
+			{"type": "Crates.io", "url": "https://crates.io/crates/bbclash"}
+		],
+		"trans_x": "30",
+		"trans_y": "80"
+	},
+	{
+		"title": "Syllabificate",
+		"header": "Syllable and polysyllable counts in Javascript.",
+		"body": [
+			"Syllable counts are an important component in the calculation of several readability metrics, such as the Flesch-Kincaid. Syllabificate was created to provide a faster, more reliable way to achieve these metrics. It does this using a truly staggering amount of regex."
+		],
+		"image": "",
+		"links": [
+			{"type": "Github", "url": "https://github.com/EndaHallahan/syllabificate"},
+			{"type": "Demo", "url": "https://endahallahan.github.io/syllabificate/syllabificateTester.html"},
+			{"type": "NPM", "url": "https://www.npmjs.com/package/syllabificate"}
+		],
+		"trans_x": "60",
+		"trans_y": "25"
+	},
+	{
+		"title": "The Abyss",
+		"header": "A cloud-based stress-reliever.",
+		"body": [
+			"Sometimes you just get the urge to run to the top of a mountain and scream your frustrations into the ether at the top of your lungs. This is like that, but on the internet.",
+			"The Abyss is something of an anonymous, no-reply messageboard. Users can submit short messages anonymously, which are then selected and displayed at random to other people on the site. It's powered by MongoDB and Express, and runs a React frontend. Additionally, both the application and the database are cloud-based, using GCS and MongoDB Atlas. The animations are done using the canvas API."
+		],
+		"image": "",
+		"links": [
+			{"type": "Github", "url": "https://github.com/EndaHallahan/Scream-into-the-Abyss"},
+			{"type": "Website", "url": "https://www.screamintotheabyss.com/"}
+		],
+		"trans_x": "15",
+		"trans_y": "60"
+	},
+	{
+		"title": "Argabarga",
+		"header": "The website you're on!",
+		"body": [
+			"The personal portfolio site of Enda Hallahan. The name comes from a random combination of letters the author commonly uses as a debugging string. Written in React."
+		],
+		"image": "",
+		"links": [
+			{"type": "REPLACE ME", "url": "https://github.com/EndaHallahan/Scream-into-the-Abyss"}
+		],
+		"trans_x": "78",
+		"trans_y": "70"	
+	}
+]
