@@ -5,12 +5,11 @@ class Spinner extends Component {
 	constructor(props) {
 		super(props);
 		this.state = {
-			degRot: this.props.initRot || 0 ,
+			degRot: 0,
 			isRotating: true
 		}
 		this.step = this.step.bind(this);
 		this.rotate = this.rotate.bind(this);
-		
 	}
 	rotate(deg) {
 		let toRot = this.state.degRot + deg;

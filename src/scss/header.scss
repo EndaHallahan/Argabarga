@@ -1,0 +1,33 @@
+header {
+	background-color: $header-colour;
+	width: 100%;
+	padding: .5rem 1rem;
+	border-bottom: 1px solid $background-highlight;
+	display: inline-flex;
+
+	a {
+		text-decoration: none;
+	}
+	
+	h1 {
+		margin: 0;
+		
+	}
+
+	.right {
+		flex-grow: 1;
+		text-align: right;
+		margin-right: 2rem;
+
+		.divider {
+			border-right: 2px solid $text-colour;
+		}
+
+		span, a {
+			line-height: 3.2rem;
+			margin-left: .5rem;
+			font-size: 1.2rem;
+		}
+		
+	}
+}

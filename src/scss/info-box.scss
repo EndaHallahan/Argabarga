@@ -1,0 +1,11 @@
+#info-box {
+	max-width: 1100px;
+	margin: 0 auto;
+	padding: 1.5rem;
+	position: relative;
+	z-index: 10000000;
+
+	.topper {
+		text-align: center;
+	}
+}

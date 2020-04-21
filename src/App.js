@@ -3,7 +3,7 @@ import './scss/index.scss';
 import HeadContainer from "./components/HeadContainer.js";
 import Spinner from "./components/Spinner.js";
 import InfoBox from "./components/InfoBox.js";
-import projects from "./projects.json"
+import projects from "./assets/projects.json"
 
 class App extends Component {
 	constructor(props) {

@@ -16,6 +16,13 @@ class InfoBox extends Component {
 
 					<h3>{this.props.project.header}</h3>
 
+					{this.props.project.image.url ? 
+						<img 
+							src = {this.props.project.image.url} 
+							alt = {this.props.project.image.alt} 
+						/> 
+						: null}
+
 					{
 						this.props.project.body.map((para, i) => {
 							return (

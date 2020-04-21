@@ -1,0 +1,47 @@
+#spinner {
+	$spin-width: 700px;
+	$spin-height: 500px;
+
+	width: $spin-width; 
+	height: $spin-height; 
+	pointer-events: none; 
+	position: relative;
+	margin: 0 auto;
+
+	#box {
+		position: absolute;
+		height: 200px;
+		width: 200px;
+		top: calc(50% - 100px);
+		left: calc(50% - 100px);
+		z-index: 0;
+		pointer-events: none; 
+	}
+
+	.spin-container {
+		transform-style: preserve-3d;
+		width: $spin-width;
+		height: $spin-height;
+		position: absolute;
+		pointer-events: none;
+
+		.spinnee {
+			position: absolute;
+			pointer-events: auto; 
+			cursor: pointer;
+			background-color: transparent; 
+			color: $text-colour;
+			border: 1px solid $text-colour;
+			font-size: 1rem;
+
+			&.selected {
+				color: $background-colour;
+				background-color: $text-colour;
+			}
+
+			&:hover {
+				border: 1px solid $text-highlight-colour;
+			}
+		}
+	}
+}
