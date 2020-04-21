@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faPlay, faPause } from '@fortawesome/free-solid-svg-icons'
 import Spinnee from "./Spinnee.js";
 
 class Spinner extends Component {
@@ -10,18 +12,27 @@ class Spinner extends Component {
 		}
 		this.step = this.step.bind(this);
 		this.rotate = this.rotate.bind(this);
+		this.toggleRotation = this.toggleRotation.bind(this);
 	}
 	rotate(deg) {
-		let toRot = this.state.degRot + deg;
-		if (toRot >= 36500) {toRot = toRot - 36500;}
-		this.setState({
-			...this.state,
-			degRot: toRot
-		});
+		if (this.state.isRotating) {
+			let toRot = this.state.degRot + deg;
+			if (toRot >= 36500) {toRot = toRot - 36500;}
+			this.setState({
+				...this.state,
+				degRot: toRot
+			});
+		}
 	}
 	step(timestamp) {
 		this.rotate(.2);
 		window.requestAnimationFrame(this.step);
+	}
+	toggleRotation() {
+		this.setState({
+			...this.state,
+			isRotating: this.state.isRotating !== true
+		});
 	}
   	componentDidMount() {
 		window.requestAnimationFrame(this.step);
@@ -57,6 +68,16 @@ class Spinner extends Component {
 						);
 					})
 				}
+				<div 
+					className = "pause-button"
+					
+				>
+					<span
+						onClick = {this.toggleRotation}
+					>
+						{this.state.isRotating ? <FontAwesomeIcon icon={faPause} /> : <FontAwesomeIcon icon={faPlay} />}
+					</span>
+				</div>
 			</div>
 		);
 	}

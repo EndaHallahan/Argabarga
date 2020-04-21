@@ -1,8 +1,10 @@
 #spinner {
-	$spin-width: 700px;
+	$spin-width: 100%;
+	$spin-max-width: 700px;
 	$spin-height: 500px;
 
 	width: $spin-width; 
+	max-width: $spin-max-width; 
 	height: $spin-height; 
 	pointer-events: none; 
 	position: relative;
@@ -18,9 +20,23 @@
 		pointer-events: none; 
 	}
 
+	.pause-button {
+		position: absolute;
+		bottom: 0;
+		width: 100%;
+		text-align: center;
+		span {
+			pointer-events: auto; 
+			cursor: pointer;
+			opacity: .5;
+			font-size: 1.3rem;
+		}
+	}
+
 	.spin-container {
 		transform-style: preserve-3d;
 		width: $spin-width;
+		max-width: $spin-max-width; 
 		height: $spin-height;
 		position: absolute;
 		pointer-events: none;

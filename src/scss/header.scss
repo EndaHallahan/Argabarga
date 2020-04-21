@@ -17,7 +17,7 @@ header {
 	.right {
 		flex-grow: 1;
 		text-align: right;
-		margin-right: 2rem;
+		margin-right: 1.5rem;
 
 		.divider {
 			border-right: 2px solid $text-colour;
@@ -25,9 +25,15 @@ header {
 
 		span, a {
 			line-height: 3.2rem;
-			margin-left: .5rem;
+			margin-right: .5rem;
 			font-size: 1.2rem;
 		}
 		
+	}
+}
+
+@media only screen and (max-width: $min-width) {
+	header {
+		display: block;
 	}
 }

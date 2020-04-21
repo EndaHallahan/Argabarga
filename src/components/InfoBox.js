@@ -6,7 +6,9 @@ class InfoBox extends Component {
 		this.infoBoxChild = React.createRef();
 	}
 	componentDidUpdate() {
-		this.infoBoxChild.current.scrollIntoView(true);
+		if (this.props.project !== null) {
+			this.infoBoxChild.current.scrollIntoView(true);
+		}
 	}
 	render() {
 		if (this.props.project !== null) {
@@ -44,14 +46,14 @@ class InfoBox extends Component {
 					</ul>
 
 					<div className="topper">
-						<a href="#top">Back To Top</a>
+						<a href = "#top">Back To Top</a>
 					</div>
 				</div>
 			);
 		} else {
 			return (
 				<div id="info-box">
-
+					<div className="instructions">Click a project to learn more.</div>
 				</div>
 			);
 		}

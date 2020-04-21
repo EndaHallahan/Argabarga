@@ -12,12 +12,19 @@ class App extends Component {
 			curSel: null
 		}
 		this.handleSelectChange = this.handleSelectChange.bind(this);
+		this.resetSelection = this.resetSelection.bind(this);
 	}
 	handleSelectChange(e) {
 		let projIndex = e.target.dataset.index;
 		this.setState({
 			...this.state,
 			curSel: parseInt(projIndex)
+		});
+	}
+	resetSelection() {
+		this.setState({
+			...this.state,
+			curSel: null
 		});
 	}
 	render() {
@@ -31,6 +38,7 @@ class App extends Component {
         		/>
         		<InfoBox
         			project = {this.state.curSel !== null ? projects[this.state.curSel] : null}
+        			resetSelection = {this.resetSelection}
         		/>
         	</div>
      	);

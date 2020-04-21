@@ -12,6 +12,8 @@ $header-colour: #222222;
 $font-family-sans: "Open Sans", sans-serif;
 $font-family-serif: "PT Serif", serif;
 
+$min-width: 400px;
+
 @import "overrides";
 @import "header";
 @import "spinner";
