@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faAngleUp } from '@fortawesome/free-solid-svg-icons'
 
 class InfoBox extends Component {
 	constructor(props) {
@@ -46,7 +48,7 @@ class InfoBox extends Component {
 					</ul>
 
 					<div className="topper">
-						<a href = "#top">Back To Top</a>
+						<a href = "#top"><FontAwesomeIcon icon={faAngleUp} /><br/>Back To Top</a>
 					</div>
 				</div>
 			);

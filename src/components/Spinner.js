@@ -43,7 +43,7 @@ class Spinner extends Component {
 			<div id="spinner">
 				<div id="box">
 					<div id="scene">
-						<div id="cubo">
+						<div id="cubo" className={this.state.isRotating ? null : "paused"}>
 							<div id="cubo-top" className="cubo-face"></div>
 							<div id="cubo-north" className="cubo-face"></div>
 							<div id="cubo-south" className="cubo-face"></div>

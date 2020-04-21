@@ -145,6 +145,13 @@ $bottom-offset-z: 900px;
 	animation-name: forever-spin;
 	animation-iteration-count: infinite;
 	animation-timing-function: linear;
+
+	&.paused {
+		animation-play-state: paused;
+		.cubo-face {
+			animation-play-state: paused;
+		}
+	}
 }
 .cubo-face {
 	background-color: lightgray;
