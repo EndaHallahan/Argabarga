@@ -8,7 +8,7 @@ class Spinnee extends Component {
 	getZDist() {
 		/* 
 			This may seem like a lot of work when you could just use translateZ. 
-			However, translateZ and perspective don't like to play nice with rotations.
+			However, translateZ and perspective don't like to play nice with nested rotations.
 			Trust me, it was the first thing I tried.
 		*/
 		let hyp = 350 - (this.props.project.trans_x/100 * 700);

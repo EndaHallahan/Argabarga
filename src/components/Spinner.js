@@ -74,6 +74,7 @@ class Spinner extends Component {
 				>
 					<span
 						onClick = {this.toggleRotation}
+						aria-label= {this.state.isRotating ? "pause button" : "play button"}
 					>
 						{this.state.isRotating ? <FontAwesomeIcon icon={faPause} /> : <FontAwesomeIcon icon={faPlay} />}
 					</span>

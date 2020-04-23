@@ -87,5 +87,22 @@
 		],
 		"trans_x": "78",
 		"trans_y": "70"	
+	},
+	{
+		"title": "Enda Hallahan",
+		"header": "A fullstack web-developer who is LOOKING FOR A JOB.",
+		"body": [
+			"Currently living in West Des Moines, Iowa, Enda Hallahan began programming with Visual Basic in the sixth grade and hasn't managed to stop since. He enjoys working in the web field because the constantly changing landscape means he's never bored. Also, he likes Javascript. Maybe a bit too much.",
+			"While he enjoys working fullstack, his specialties lie in the backend and the functional side of the frontend. His favourite thing to do on a webpage is to make things move. You can view his resume by clicking the link in the top-right corner of the page."
+		],
+		"image": {
+			"url": "",
+			"alt": ""
+		},
+		"links": [
+			
+		],
+		"trans_x": "70",
+		"trans_y": "40"	
 	}
 ]
